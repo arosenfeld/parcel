@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="parcel" default="dist" basedir=".">
+    <property name="src" location="src" />
+    <property name="docs" location="docs" />
+    <property name="bin" location="bin" />
+    <property name="dist"  location="dist" />
+
+    <target name="init">
+        <mkdir dir="${bin}" />
+        <mkdir dir="${docs}" />
+    </target>
+
+    <target name="clean">
+        <delete dir="${bin}" />
+        <delete dir="${dist}" />
+        <delete dir="${docs}/javadoc" />
+    </target>
+
+    <target name="compile" depends="init">
+        <javac srcdir="${src}" destdir="${bin}" includeantruntime="false" debug="true" target="1.7" source="1.7">
+            <classpath refid="classpath" />
+        </javac>
+    </target>
+
+    <target name="dist" depends="compile">
+        <mkdir dir="${dist}" />
+        <jar jarfile="${dist}/parcel.jar" basedir="${bin}" />
+    </target>
+
+    <target name="javadoc" depends="init">
+        <javadoc packagenames="io.*" sourcepath="${src}" destdir="${docs}/javadoc" />
+    </target>
+</project>
