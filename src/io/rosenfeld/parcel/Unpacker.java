@@ -5,7 +5,7 @@ import java.nio.ByteBuffer;
 /**
  * Helper class for unpacking a byte array.
  * 
- * @author Aaron Rosenfeld <aaron@aaron-rosenfeld.com>
+ * @author Aaron Rosenfeld <aaron@rosenfeld.io>
  */
 public class Unpacker {
 

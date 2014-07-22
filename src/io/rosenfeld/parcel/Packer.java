@@ -7,7 +7,7 @@ import java.io.IOException;
 /**
  * Helper class for packing byte array without knowing its size a priori.
  * 
- * @author Aaron Rosenfeld <aaron@aaron-rosenfeld.comu>
+ * @author Aaron Rosenfeld <aaron@rosenfeld.io>
  */
 public class Packer {
 
